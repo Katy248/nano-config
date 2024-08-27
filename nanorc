@@ -1,0 +1,64 @@
+## Colors
+set titlecolor bold,lightwhite,red
+# set promptcolor lightwhite,grey
+set statuscolor bold,green
+set errorcolor bold,white,red
+# set spotlightcolor black,lightyellow
+# set selectedcolor lightwhite,magenta
+# set stripecolor ,yellow
+# set scrollercolor cyan
+set numbercolor bold,white
+set keycolor italic,lightwhite,black
+set functioncolor white
+
+## Settings
+set afterends # right ctrl+{left,right}
+set indicator # add scrollbar
+set atblanks # ХЗ, пусть будет
+set autoindent
+set tabsize 4
+set linenumbers
+set minibar # move titlebar to botton and remove program name
+set mouse # enables mouse
+set softwrap # enables wrapping
+set zap # right selection deletion
+set constantshow # current line in statusline
+# set guidestripe 80 # adds line on 80 column
+set brackets ""')>]}"
+set matchbrackets "(<[{)>]}"
+
+## Key bindings
+bind ^X cut main
+bind ^C copy main
+bind ^V paste all
+bind ^Q exit all
+bind ^S savefile main
+bind ^W writeout main
+bind ^O insert main
+set multibuffer
+bind ^H help all
+bind ^H exit help
+bind ^F whereis all
+bind ^G findnext all
+bind ^B wherewas all
+bind ^D findprevious all
+bind ^R replace main
+unbind ^U all
+unbind ^N main
+unbind ^Y all
+unbind M-J main
+unbind M-T main
+bind ^A mark main
+bind ^P location main
+bind ^T gotoline main
+bind ^T gotodir browser
+bind ^T cutrestoffile execute
+bind ^L linter execute
+bind ^E execute main
+bind ^K "{mark}{end}{zap}" main
+bind ^U "{mark}{home}{zap}" main
+bind ^Z undo main
+bind ^Y redo main
+
+## Includes
+include "/usr/share/nano/*.nanorc"
